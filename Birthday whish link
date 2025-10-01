@@ -1,0 +1,163 @@
+Got it ✅ Let’s go step by step very clearly so you can make a wish link on GitHub Pages.
+
+
+---
+
+🎂 How to Create a Birthday Wish Link on GitHub
+
+🔹 Step 1: Create a GitHub Account
+
+1. Go to github.com
+
+
+2. Click Sign up (if you don’t already have an account).
+
+
+3. Verify your email → Log in.
+
+
+
+
+---
+
+🔹 Step 2: Create a Repository
+
+1. On the top right, click the + sign → New repository.
+
+
+2. Repository name → type: wish-link (you can choose any name).
+
+
+3. Select Public.
+
+
+4. Tick ✅ Add a README file.
+
+
+5. Click Create repository.
+
+
+
+
+---
+
+🔹 Step 3: Add Your HTML File
+
+1. Go to your new repository.
+
+
+2. Click Add file → Create new file.
+
+
+3. In the filename box, type: index.html.
+
+
+4. Paste this code:
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Special Wish</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffcc70, #ff7eb3);
+      color: #fff;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="greeting">Happy Birthday!</h1>
+  <p id="message">Wishing you joy and happiness 🎉</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('n') || "Friend";
+    const type = params.get('t') || "birthday";
+
+    let greeting = "";
+    if (type === "birthday") {
+      greeting = `🎂 Happy Birthday, ${name}! 🎉`;
+    } else if (type === "anniversary") {
+      greeting = `💖 Happy Anniversary, ${name}! 💍`;
+    } else {
+      greeting = `🌟 Hello ${name}, best wishes to you!`;
+    }
+
+    document.getElementById("greeting").textContent = greeting;
+  </script>
+</body>
+</html>
+
+5. Scroll down → Click Commit new file (save).
+
+
+
+
+---
+
+🔹 Step 4: Enable GitHub Pages
+
+1. In your repository, click Settings (top menu).
+
+
+2. On the left, scroll down → click Pages.
+
+
+3. Under Source, select:
+
+Branch: main
+
+Folder: / (root)
+
+Click Save.
+
+
+
+4. Wait 1–2 minutes.
+
+
+5. You’ll get a live link like:
+
+https://yourusername.github.io/wish-link/
+
+
+
+
+---
+
+🔹 Step 5: Test & Share Your Wish Link
+
+Now, add names and types to the URL:
+
+🎂 Birthday:
+
+https://yourusername.github.io/wish-link/?n=Priyanka&t=birthday
+
+💖 Anniversary:
+
+https://yourusername.github.io/wish-link/?n=Rahul&t=anniversary
+
+🌟 General:
+
+https://yourusername.github.io/wish-link/?n=Friend&t=general
+
+Each link will automatically show a personalized message 🎉
+
+
+---
+
+👉 Do you want me to make a ready-to-fork GitHub repo for you, so you just click one button (“Fork”) and get it working instantly?
+
